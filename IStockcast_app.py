@@ -420,7 +420,7 @@ with tab3:
         st.session_state['summary_high_model'] = ""
     
     st.text_area(label="**Low Model**", value=st.session_state['summary_low_model'], disabled=True, height=550)
-    st.text_area(label="**High Model**", value=st.session_state['summary_low_model'],disabled=True, height=550)
+    st.text_area(label="**High Model**", value=st.session_state['summary_high_model'],disabled=True, height=550)
 
 if 'run_complete' not in st.session_state:
     st.session_state['run_complete'] = False
