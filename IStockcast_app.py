@@ -181,8 +181,8 @@ def SA(df, dl, du, init_temp, train_data, test_data, numstop, lower, upper, prog
             best_state = current_state
             best_energy = current_energy
             count_stop = 0
-            if st.session_state['progress_bar_value'] <= 95:
-                st.session_state['progress_bar_value'] += np.random.randint(4,7)
+            if st.session_state['progress_bar_value'] <= 90:
+                st.session_state['progress_bar_value'] += np.random.randint(3,7)
                 my_bar.progress(text=f"Progress {st.session_state['progress_bar_value']}%",value=st.session_state['progress_bar_value'])
 
         round_end_time = time.time()  # Record end time for the round
@@ -198,8 +198,8 @@ def SA(df, dl, du, init_temp, train_data, test_data, numstop, lower, upper, prog
             break
 
         temperature = t0/np.log(count+1)
-        if st.session_state['progress_bar_value'] <= 95 and (count%50==0):
-            st.session_state['progress_bar_value'] += np.random.randint(4,7)
+        if st.session_state['progress_bar_value'] <= 90 and (count%50==0):
+            st.session_state['progress_bar_value'] += np.random.randint(3,7)
             my_bar.progress(text=f"Progress {st.session_state['progress_bar_value']}%",value=st.session_state['progress_bar_value'])
         
 
